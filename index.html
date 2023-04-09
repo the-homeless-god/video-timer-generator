@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Timer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://raw.githubusercontent.com/spite/ccapture.js/master/build/CCapture.all.min.js"></script>
+  </head>
+  <body>
+    <h1>Video Timer</h1>
+    <div class="settings">
+      <label for="time">Time (in seconds):</label>
+      <input type="number" id="time" min="0" />
+      <label for="font">Font:</label>
+      <input type="text" id="font" placeholder="Arial" />
+      <label for="size">Size:</label>
+      <input type="number" id="size" min="0" placeholder="24" />
+      <label for="bgColor">Background Color:</label>
+      <input type="color" id="bgColor" />
+      <label for="fontColor">Font Color:</label>
+      <input type="color" id="fontColor" />
+      <button id="startBtn">Start Timer</button>
+    </div>
+    <div class="timer" id="timer"></div>
+    <button id="downloadBtn" disabled>Download Video</button>
+    <script src="app.js"></script>
+  </body>
+</html>
