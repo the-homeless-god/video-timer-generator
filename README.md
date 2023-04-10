@@ -2,33 +2,38 @@
 
 [DEMO](https://the-homeless-god.github.io/video-timer-generator/)
 
-Video Timer is a simple web application that allows users to create and download a custom video timer. Users can set the timer's duration, font, size, background color, and font color. The timer can count up from zero or count down from a specified time.
+![image](https://user-images.githubusercontent.com/32175240/230802725-ea10083b-cfda-4abb-b960-5de5609e3fa8.png)
 
-## How to Use
+This is a web application that generates a video timer based on user input. The user can select the duration of the timer, the font style and size, and the colors of the background and font.
 
-1. Open the `index.html` file in a web browser that supports WebM (e.g., Google Chrome or Mozilla Firefox).
-2. Enter the desired time duration in seconds.
-3. Enter the desired font (e.g., Arial).
-4. Enter the desired font size (e.g., 24).
-5. Choose the desired background color.
-6. Choose the desired font color.
-7. Click the "Start Timer" button to start the timer and begin recording the video.
-8. Wait for the timer to finish. The "Download Video" button will be enabled when the timer ends.
-9. Click the "Download Video" button to download the generated video in WebM format.
+## Usage
+
+1. Open `index.html` in a web browser.
+2. Set the duration of the timer, font style and size, and background and font colors.
+3. Click the "Start" button to start the timer.
+4. Click the "Download" button to download the generated video.
 
 ## Dependencies
 
-This project uses the following external libraries:
+This application uses the following dependencies:
 
-- [CCapture.js](https://github.com/spite/ccapture.js) - A library to capture canvas-based animations at a fixed framerate.
+- [CCapture.js](https://github.com/spite/ccapture.js) - for capturing frames of the video.
+- [Prettier](https://prettier.io/) - for code formatting.
 
-## Browser Support
+## Development
 
-Video Timer relies on the CCapture.js library, which requires a browser that supports WebM video format. The following browsers are recommended:
+To set up the development environment:
 
-- Google Chrome
-- Mozilla Firefox
+1. Clone this repository.
+2. Run `npm install` to install dependencies.
+3. Run `npm start` to start the development server.
+4. Open `http://localhost:8080` in a web browser.
+
+To build the application for production:
+
+1. Run `npm run build`.
+2. The built files will be located in the `dist` directory.
 
 ## License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
