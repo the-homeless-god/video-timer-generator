@@ -1,0 +1,23 @@
+{
+  "name": "video-timer-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "format": "prettier --write .",
+    "start": "http-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "jest": "^27.4.5",
+    "jest-environment-jsdom": "^27.4.6",
+    "prettier": "^2.8.7"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  }
+}
