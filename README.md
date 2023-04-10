@@ -1,5 +1,7 @@
 # Video Timer Generator
 
+Create stunning countdown videos with ease using Video Timer. Set your start and finish time, choose your font and colors, and download your video in seconds. Perfect for social media posts, YouTube videos, and more. Try Video Timer Generator now.
+
 [DEMO](https://the-homeless-god.github.io/video-timer-generator/)
 
 ![image](https://user-images.githubusercontent.com/32175240/230804138-32615e44-0460-4a23-a03f-dd6bb396f1ee.png)
