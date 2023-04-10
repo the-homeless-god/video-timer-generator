@@ -18,6 +18,13 @@ script.addEventListener("load", function () {
     timer.style.color = fontColorInput.value || "#FFFFFF";
   }
 
+  function generateFileName(startTime, endTime) {
+    const startSeconds = formatTime(startTime, "seconds");
+    const endSeconds = formatTime(endTime, "seconds");
+    return `timer-video-from${startSeconds}-to${endSeconds}.webm`;
+  }
+  
+
   function startTimer() {
     updateTimerStyle();
     const maxTime = parseInt(timeInput.value, 10);
@@ -56,13 +63,13 @@ script.addEventListener("load", function () {
   }
 
   function startCapture() {
-    setupCanvas();
     capturer = new CCapture({
       format: "webm",
       framerate: 30,
-      name: "timer-video",
+      name: generateFileName(parseInt(startTimeInput.value, 10), parseInt(timeInput.value, 10)),
       timeLimit: parseInt(timeInput.value, 10),
       verbose: true,
+      display: true,
     });
     capturer.start();
   }
@@ -81,6 +88,7 @@ script.addEventListener("load", function () {
   function endCapture() {
     capturer.stop();
     capturer.save();
+    const downloadBtn = document.getElementById("downloadBtn");
     downloadBtn.removeAttribute("disabled");
     document.body.removeChild(canvas);
   }
@@ -88,6 +96,7 @@ script.addEventListener("load", function () {
   startBtn.addEventListener("click", () => {
     startTimer();
     startCapture();
+    const downloadBtn = document.getElementById("downloadBtn");
     downloadBtn.setAttribute("disabled", true);
   });
 
@@ -95,9 +104,10 @@ script.addEventListener("load", function () {
 
   function captureFrame() {
     drawTimer();
-    capturer.capture(canvas);
+    capturer?.capture(canvas);
   }
 
+  setupCanvas();
   setInterval(captureFrame, 1000 / 30);
 });
 

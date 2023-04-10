@@ -1,82 +1,161 @@
-body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin: 0;
-}
-
-h1 {
-  margin: 20px 0;
-}
-
-.settings {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.settings label {
-  margin-right: 10px;
-}
-
-.settings input[type="number"],
-.settings input[type="text"],
-.settings input[type="color"] {
-  font-family: inherit;
-  font-size: inherit;
-  padding: 4px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  width: 100px;
-  max-width: 100%;
-  box-sizing: border-box;
-  margin-right: 10px;
-}
-
-.settings input[type="color"] {
-  height: 32px;
-  width: 50px;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-}
-
-.settings button {
-  padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
-  background-color: #3f51b5;
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.settings button:hover {
-  background-color: #303f9f;
-}
-
-.timer {
-  font-size: 48px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-#downloadBtn {
-  padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
-  background-color: #4caf50;
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-#downloadBtn[disabled] {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
-
-#downloadBtn:hover:not([disabled]) {
-  background-color: #388e3c;
-}
+:root {
+    --primary-color: #3f51b5;
+    --secondary-color: #4caf50;
+    --light-bg-color: #f4f4f4;
+    --dark-bg-color: #222;
+    --font-family: Arial, sans-serif;
+    --font-size: 16px;
+    --label-color: #333;
+    --input-color: #ccc;
+    --border-radius: 4px;
+  }
+  
+  body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    text-align: center;
+    margin: 0;
+  }
+  
+  h1 {
+    margin: 20px 0;
+  }
+  
+  .settings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .settings label {
+    margin-right: 10px;
+    color: var(--label-color);
+  }
+  
+  .settings input[type="number"],
+  .settings input[type="text"],
+  .settings input[type="color"] {
+    font-family: inherit;
+    font-size: inherit;
+    padding: 4px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--input-color);
+    width: 100px;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-right: 10px;
+  }
+  
+  .settings input[type="color"] {
+    height: 32px;
+    width: 50px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+  
+  .settings button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .settings button:hover {
+    background-color: #303f9f;
+  }
+  
+  .timer {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  #downloadBtn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--secondary-color);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #downloadBtn[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  #downloadBtn:hover:not([disabled]) {
+    background-color: #388e3c;
+  }
+  
+  .container {
+    background-color: var(--light-bg-color);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2), -2px -2px 10px rgba(255, 255, 255, 0.5);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  
+  .container h1 {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2), -1px -1px 5px rgba(255, 255, 255, 0.5);
+    color: var(--primary-color);
+  }
+  
+  .container .settings label {
+    color: var(--primary-color);
+  }
+  
+  .container .settings input[type="number"],
+  .container .settings input[type="text"],
+  .container .settings input[type="color"] {
+    border-color: var(--primary-color);
+  }
+  
+  .container .settings button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: var(--button-border-radius);
+    background-color: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .container .settings button:hover {
+    background-color: var(--primary-color-dark);
+  }
+  
+  .container .timer {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .container #downloadBtn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: var(--button-border-radius);
+    background-color: var(--secondary-color);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .container #downloadBtn[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .container #downloadBtn:hover:not([disabled]) {
+    background-color: var(--secondary-color-dark);
+  }
+  
