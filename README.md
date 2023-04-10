@@ -2,7 +2,7 @@
 
 [DEMO](https://the-homeless-god.github.io/video-timer-generator/)
 
-![image](https://user-images.githubusercontent.com/32175240/230802725-ea10083b-cfda-4abb-b960-5de5609e3fa8.png)
+![image](https://user-images.githubusercontent.com/32175240/230804138-32615e44-0460-4a23-a03f-dd6bb396f1ee.png)
 
 This is a web application that generates a video timer based on user input. The user can select the duration of the timer, the font style and size, and the colors of the background and font.
 
